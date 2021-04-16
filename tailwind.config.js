@@ -6,7 +6,21 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+        fontFamily: {
+            'body' : ['Montserrat', 'sans-serif']
+        },
+        colors: {
+            'midnight-green' : '#114b5f',
+            'metallic-seaweed' : '#028090',
+            'neutral' : '#f0f0f0',
+            'queen-blue' :'#456990',
+            'fiery-red' : '#f45b69'
+        },
+        borderWidth: {
+            '1' : '1px'
+        }
+    },
   },
   variants: {
     extend: {},
