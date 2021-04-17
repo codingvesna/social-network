@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin - @yield('title')</title>
+    <title>lemonade - @yield('title')</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <link href="{{ asset('fontisto/css/fontisto/fontisto.min.css') }}" rel="stylesheet">
