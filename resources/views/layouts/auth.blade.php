@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>lemonade - @yield('title')</title>
+    <title>DelosApp - @yield('title')</title>
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat" rel="stylesheet">
     <link href="{{ asset('fontisto/css/fontisto/fontisto.min.css') }}" rel="stylesheet">
