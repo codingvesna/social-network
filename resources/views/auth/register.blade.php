@@ -18,6 +18,7 @@
                     <p class="text-sm text-p font-normal mb-5">Registruj se i postani deo IT zajednice</p>
                     <!-- Register Form -->
                     <form action="{{ route('register') }}" method="post" class="mb-10 pt-5 flex flex-col justify-start items-start">
+                        @csrf
                         <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="name" class="text-xs font-semibold text-p ">Ime</label>
