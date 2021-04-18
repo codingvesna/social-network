@@ -22,26 +22,50 @@
                         <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="name" class="text-xs font-semibold text-p ">Ime</label>
-                                <input type="text" name="name" id="name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" placeholder="Vesna"/>
+                                <input type="text" name="name" id="name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="Vesna"/>
+
+                                @error('name')
+                                    <div class="text-red-500 mt-1 text-xs">
+                                        {{ $message }}
+                                    </div>
+                                @enderror
                             </div>
 
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="last_name" class="text-xs font-semibold text-p">Prezime</label>
-                                <input type="text" name="last_name" id="last_name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" placeholder="Milovanovic"/>
+                                <input type="text" name="last_name" id="last_name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="Milovanovic"/>
+
+                                @error('last_name')
+                                <div class="text-red-500 mt-1 text-xs">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="w-full flex justify-center lg:justify-between">
                             <div class="w-full px-3 mb-5">
                                 <label for="email" class="text-xs font-semibold text-p">Email</label>
-                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" placeholder="email@email.com"/>
+                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="email@email.com"/>
+
+                                @error('email')
+                                <div class="text-red-500 mt-1 text-xs">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
                         </div>
 
                         <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="password" class="text-xs font-semibold text-p test-left">Šifra</label>
-                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline" placeholder="********"/>
+                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="********"/>
+
+                                @error('password')
+                                <div class="text-red-500 mt-1 text-xs">
+                                    {{ $message }}
+                                </div>
+                                @enderror
                             </div>
 
                             <div class="w-full lg:w-1/2 px-3 mb-5">
