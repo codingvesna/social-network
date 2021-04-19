@@ -90,6 +90,12 @@
                         <p class="text-p text-xs w-full py-1"><a href="{{ route('login') }}">Imate nalog? <span class="text-queen-blue hover:text-fiery-red"> Ulogujte se.</span></a></p>
                         <p class="text-p text-xs w-full py-1 hover:text-fiery-red"><a href="#">Zaboravili ste lozinku?</a></p>
                     </div>
+
+                    <div class="mt-5">
+                        <p class="text-p text-xs w-full justify-center">
+                            Developed by <a href="https://www.instagram.com/codingvesna/" class="text-queen-blue hover:text-fiery-red">Vesna Milovanovic</a>
+                        </p>
+                    </div>
                 </div>
 
             </div>
