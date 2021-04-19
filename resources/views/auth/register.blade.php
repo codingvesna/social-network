@@ -87,7 +87,7 @@
                     <hr/>
 
                     <div class="flex flex-wrap justify-center items-center w-full pt-10">
-                        <p class="text-p text-xs w-full py-1"><a href="#">Imate nalog? <span class="text-queen-blue hover:text-fiery-red"> Ulogujte se.</span></a></p>
+                        <p class="text-p text-xs w-full py-1"><a href="{{ route('login') }}">Imate nalog? <span class="text-queen-blue hover:text-fiery-red"> Ulogujte se.</span></a></p>
                         <p class="text-p text-xs w-full py-1 hover:text-fiery-red"><a href="#">Zaboravili ste lozinku?</a></p>
                     </div>
                 </div>
