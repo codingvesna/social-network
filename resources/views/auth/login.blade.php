@@ -17,14 +17,28 @@
                     <h3 class="font-semibold text-xl mb-1 text-main">Dobro došli nazad</h3>
                     <p class="text-sm text-p font-normal mb-5">Ukoliko želite da pristupite Vašem nalogu, ulogujte se.</p>
                     <!-- Login Form -->
-                    <form action="" method="" class="mb-10 pt-5 flex flex-col justify-start items-start" autocomplete="off">
+                    @if(session()->has('status'))
+
+                        <div class="relative flex flex-col sm:flex-row sm:items-center bg-fiery-red shadow rounded-md py-2 pl-6 pr-8 sm:pr-6">
+                            <div class="flex flex-row items-center border-b sm:border-b-0 w-full sm:w-auto pb-4 sm:pb-0">
+                                <div class="text-neutral">
+                                    <i class="fi fi-close align-middle"></i>
+                                </div>
+                                <div class="text-sm text-white font-medium ml-3">Greška!</div>
+                            </div>
+                            <div class="text-xs tracking-wide text-neutral mt-4 sm:mt-0 sm:ml-4">{{ session('status') }}</div>
+                        </div>
+
+                    @endif
+
+                    <form action="{{ route('login') }}" method="post" class="mb-10 pt-5 flex flex-col justify-start items-start" autocomplete="off">
                         @csrf
                         <div class="w-full flex flex-col justify-center">
 
                         <div class="w-full flex justify-center lg:justify-between">
                             <div class="w-full px-3 mb-5">
                                 <label for="email" class="text-xs font-semibold text-p float-left mb-1">Email</label>
-                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="email@email.com"
+                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('email') border-fiery-red @enderror" placeholder="email@email.com"
                                        value="{{ old('email') }}"/>
 
                                 @error('email')
@@ -38,7 +52,7 @@
                         <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
                             <div class="w-full px-3 mb-5">
                                 <label for="password" class="text-xs font-semibold text-p test-left float-left mb-1">Šifra</label>
-                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="********"
+                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('password') border-fiery-red @enderror" placeholder="********"
                                        value=""/>
 
                                 @error('password')
