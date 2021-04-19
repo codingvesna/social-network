@@ -23,7 +23,7 @@
     </div>
     <div class="w-6/12 flex items-center">
         <ul class="w-full flex flex-row justify-end items-center">
-                <li><h3 class="text-p text-base mr-5 align-middle"> Vesna Milovanovic</h3></li>
+                <li><h3 class="text-p text-base mr-5 align-middle">{{ auth()->user()->name }}</h3></li>
                 <li class="nav-icon flex justify-center items-center border-solid border-1 border-transparent rounded mr-3 hover:border-queen-blue hover:bg-queen-blue hover:shadow" style="width: 40px; height: 40px;"
                     title="Notifikacije">
                     <a href="#">
