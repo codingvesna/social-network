@@ -17,7 +17,8 @@ module.exports = {
             'fiery-red' : '#f45b69',
             'main' : '#3b3b3b',
             'p' : '#3e4e50',
-            'border' :'#F2F3E2'
+            'border' :'#F2F3E2',
+            'icon' : '#999'
         },
         borderWidth: {
             '1' : '1px'
