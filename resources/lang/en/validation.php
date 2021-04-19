@@ -97,7 +97,7 @@ return [
     'password' => 'The password is incorrect.',
     'present' => 'The :attribute field must be present.',
     'regex' => 'The :attribute format is invalid.',
-    'required' => 'The :attribute field is required.',
+    'required' => 'Ovo polje je obavezno.',
     'required_if' => 'The :attribute field is required when :other is :value.',
     'required_unless' => 'The :attribute field is required unless :other is in :values.',
     'required_with' => 'The :attribute field is required when :values is present.',
@@ -107,7 +107,7 @@ return [
     'prohibited' => 'The :attribute field is prohibited.',
     'prohibited_if' => 'The :attribute field is prohibited when :other is :value.',
     'prohibited_unless' => 'The :attribute field is prohibited unless :other is in :values.',
-    'same' => 'The :attribute and :other must match.',
+    'same' => 'Polja se ne poklapaju.',
     'size' => [
         'numeric' => 'The :attribute must be :size.',
         'file' => 'The :attribute must be :size kilobytes.',
