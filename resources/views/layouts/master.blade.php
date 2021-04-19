@@ -14,6 +14,7 @@
 
 </head>
 <body class="font-body">
+@include('partials.header.header')
 @yield('content')
 </body>
 </html>
