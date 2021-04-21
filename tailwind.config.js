@@ -11,11 +11,14 @@ module.exports = {
             'body' : ['Montserrat', 'sans-serif']
         },
         colors: {
-            'midnight-green' : '#114b5f',
-            'metallic-seaweed' : '#028090',
-            'neutral' : '#f0f0f0',
+
+            'neutral' : '#F7F7F2',
             'queen-blue' :'#456990',
-            'fiery-red' : '#f45b69'
+            'fiery-red' : '#f45b69',
+            'main' : '#3b3b3b',
+            'p' : '#3e4e50',
+            'border' :'#F2F3E2',
+            'icon' : '#999'
         },
         borderWidth: {
             '1' : '1px'
