@@ -34,7 +34,7 @@
 
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="last_name" class="text-xs font-semibold text-p float-left mb-1">Prezime</label>
-                                <input type="text" name="last_name" id="last_name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="Milovanovic"
+                                <input type="text" name="last_name" id="last_name" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('last_name') border-fiery-red @enderror" placeholder="Milovanovic"
                                        value="{{ old('last_name') }}"/>
 
                                 @error('last_name')
@@ -48,7 +48,7 @@
                         <div class="w-full flex justify-center lg:justify-between">
                             <div class="w-full px-3 mb-5">
                                 <label for="email" class="text-xs font-semibold text-p float-left mb-1">Email</label>
-                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="email@email.com"
+                                <input type="email" name="email" id="email" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('email') border-fiery-red @enderror" placeholder="email@email.com"
                                        value="{{ old('email') }}"/>
 
                                 @error('email')
@@ -62,7 +62,7 @@
                         <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
                             <div class="w-full lg:w-1/2 px-3 mb-5">
                                 <label for="password" class="text-xs font-semibold text-p test-left float-left mb-1">Šifra</label>
-                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('name') border-fiery-red @enderror" placeholder="********"
+                                <input type="password" name="password" id="password" class="w-full px-3 py-2 text-sm leading-tight text-gray-700 border rounded shadow appearance-none focus:outline-none focus:shadow-outline @error('password') border-fiery-red @enderror" placeholder="********"
                                 value=""/>
 
                                 @error('password')
@@ -87,8 +87,14 @@
                     <hr/>
 
                     <div class="flex flex-wrap justify-center items-center w-full pt-10">
-                        <p class="text-p text-xs w-full py-1"><a href="#">Imate nalog? <span class="text-queen-blue hover:text-fiery-red"> Ulogujte se.</span></a></p>
+                        <p class="text-p text-xs w-full py-1"><a href="{{ route('login') }}">Imate nalog? <span class="text-queen-blue hover:text-fiery-red"> Ulogujte se.</span></a></p>
                         <p class="text-p text-xs w-full py-1 hover:text-fiery-red"><a href="#">Zaboravili ste lozinku?</a></p>
+                    </div>
+
+                    <div class="mt-5">
+                        <p class="text-p text-xs w-full justify-center">
+                            Developed by <a href="https://www.instagram.com/codingvesna/" class="text-queen-blue hover:text-fiery-red">Vesna Milovanovic</a>
+                        </p>
                     </div>
                 </div>
 
