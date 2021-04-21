@@ -54,7 +54,7 @@
 
                 <li class="nav-icon flex justify-center items-center border-solid border-1 border-transparent rounded hover:border-queen-blue hover:bg-queen-blue hover:shadow" style="width: 40px; height: 40px;"
                     title="Izloguj se">
-                    <a href="#">
+                    <a href="{{ route('logout') }}">
                         <span class="p-3 align-middle"><i class="fi fi-power text-lg text-icon"></i></span>
                     </a>
                 </li>
