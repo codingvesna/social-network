@@ -17,4 +17,5 @@ mix.js('resources/js/app.js', 'public/js')
     ])
     .postCss('resources/css/reset.css', 'public/css')
     .postCss('resources/css/custom.css', 'public/css')
+    .js('resources/js/main.js', 'public/js')
     ;
