@@ -11,9 +11,8 @@
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-    <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
-    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-
+    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/main.js')}}" type="text/javascript" defer></script>
 </head>
 <body class="font-body">
     @include('partials.header.header')
