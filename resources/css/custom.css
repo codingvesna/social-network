@@ -15,3 +15,12 @@ ul.avatar-dropdown li:hover span{
     width: 100px;
     height: 50px;
 }
+
+.profile-card-btn {
+    background-color: #456990;
+    background-image: linear-gradient(315deg, #456990 0%, #f45b69 74%);
+    box-shadow: 0 0 0 0 #f45b69, 0.2rem 0.2rem 30px #456990;
+}
+.profile-card-btn:hover{
+    box-shadow: 0 0 0 0 #f45b69, 0.2rem 0.2rem 60px #456990;
+}
