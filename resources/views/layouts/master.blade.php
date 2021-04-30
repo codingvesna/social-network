@@ -16,7 +16,9 @@
 
 </head>
 <body class="font-body">
-@include('partials.header.header')
+    @include('partials.header.header')
+    <!-- Mobile Search -->
+    @include('partials.header.search_mobile')
 @yield('content')
 </body>
 </html>

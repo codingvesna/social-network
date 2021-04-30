@@ -28,13 +28,6 @@
         </a>
     </li>
 
-{{--    <li class="nav-icon flex justify-center items-center border-solid border-1 border-transparent rounded hover:border-queen-blue hover:bg-queen-blue hover:shadow" style="width: 40px; height: 40px;"--}}
-{{--        title="Izloguj se">--}}
-{{--        <a href="{{ route('logout') }}">--}}
-{{--            <span class="p-3 align-middle"><i class="fi fi-power text-lg text-icon"></i></span>--}}
-{{--        </a>--}}
-{{--    </li>--}}
-
     <li class="navicon nav-icon" >
         <a href="#">
             <img class="inline object-cover w-8 h-8 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile picture"/>
