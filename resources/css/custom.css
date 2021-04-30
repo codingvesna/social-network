@@ -5,7 +5,9 @@ body {
     overflow-x: hidden;
 }
 
-li.nav-icon:hover a span i{
+li.nav-icon:hover a span i,
+ul.avatar-dropdown li:hover a,
+ul.avatar-dropdown li:hover span{
     color: white;
 }
 
