@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .navicon {
+        @apply flex justify-center items-center border-solid border-1 border-transparent rounded mr-3 hover:border-queen-blue hover:bg-queen-blue hover:shadow;
+    }
+    .nav-red-icon {
+        @apply flex justify-center items-center border-solid border-1 border-transparent rounded mr-3 hover:border-fiery-red hover:bg-fiery-red hover:shadow;
+    }
+    .nav-avatar {
+        @apply flex justify-center items-center;
+    }
+}

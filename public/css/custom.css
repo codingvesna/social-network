@@ -5,8 +5,12 @@ body {
     overflow-x: hidden;
 }
 
-li.nav-icon:hover a span i,
-a.nav-icon:hover span i{
+li.nav-icon:hover a span i{
     color: white;
+}
+
+.logo {
+    width: 100px;
+    height: 50px;
 }
 

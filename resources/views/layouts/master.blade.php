@@ -11,10 +11,14 @@
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
+    <script src="{{asset('js/main.js')}}" type="text/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 
 </head>
 <body class="font-body">
-@include('partials.header.header')
+    @include('partials.header.header')
+    <!-- Mobile Search -->
+    @include('partials.header.search_mobile')
 @yield('content')
 </body>
 </html>
