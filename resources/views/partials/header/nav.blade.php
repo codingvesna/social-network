@@ -1,6 +1,6 @@
 <nav class="w-full flex p-2 flex flex-row justify-start items-center">
     @if (auth()->user())
-    <div class="w-2/12 flex justify-center">
+    <div class="w-2/12 flex justify-start">
         <a href="{{ route('dashboard') }}" title="Dashboard">
             <img src="images/logo.jpg" alt="logo" class="object-scale-down logo"/>
         </a>
