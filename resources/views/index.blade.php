@@ -26,9 +26,11 @@
                 <!-- All Posts -->
                 @include('partials.single_post')
             </div>
-            <aside class="h-auto w-full md:w-3/12 border-1 border-solid border-pink-100">
-                profile
+            <aside class="h-auto w-full md:w-3/12">
+                <!-- Profile Card -->
+                @include('partials.aside.profile_card')
                 <!-- Who to follow - View All -->
+                @include('partials.aside.who_to_follow')
                 <!-- Group Suggestions - View All -->d
                 <!-- Popular Tags -->
             </aside>

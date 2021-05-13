@@ -6,7 +6,7 @@
                     <img class="inline object-cover w-12 h-12 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile picture"/>
                 </div>
                 <div class="w-10/12 flex flex-col justify-start items-start">
-                    <span class="font-bold text-base text-p">{{ auth()->user()->name }} {{ auth()->user()->last_name }} </span>
+                    <span class="font-bold text-base text-p">Vesna Milovanovic </span>
                     <span class="text-xs font-normal text-queen-blue"> 15:45h</span>
                 </div>
             </div>
