@@ -21,12 +21,6 @@
         </a>
     </li>
 
-    <li class="navicon nav-icon" style="width: 40px; height: 40px;"
-        title="Bookmarks">
-        <a href="#">
-            <span class="p-3 align-middle"><i class="fi fi-bookmark text-lg text-icon"></i></span>
-        </a>
-    </li>
 
     <div class="relative"  x-data="{ open: false }">
         <button class="focus:outline-none"

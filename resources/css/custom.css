@@ -7,7 +7,8 @@ body {
 
 li.nav-icon:hover a span i,
 ul.avatar-dropdown li:hover a,
-ul.avatar-dropdown li:hover span{
+ul.avatar-dropdown li:hover span,
+ul.sidenav li:hover a span{
     color: white;
 }
 
