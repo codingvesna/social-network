@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <main class="px-4 lg:px-10 py-4 lg:py-6">
+    <main class="px-4 lg:px-10 py-4 lg:py-6 mt-5">
         <section class="w-full flex flex-col md:flex-row justify-center items-start">
-            <aside class="h-auto w-full md:w-2/12 px-4 border-1 border-solid border-pink-100">
+            <aside class="h-auto w-full md:w-2/12 px-4">
                 <!-- Sidebar -->
                 @include('partials.aside.sidebar')
                 <!-- Button Group -->
@@ -20,10 +20,11 @@
                     </button>
                 </div>
             </aside>
-            <div class="h-auto w-full md:w-7/12 border-1 border-solid border-pink-100">
+            <div class="h-auto w-full md:w-7/12">
                 <!-- Post  -->
                 @include('partials.post')
                 <!-- All Posts -->
+                @include('partials.single_post')
             </div>
             <aside class="h-auto w-full md:w-3/12 border-1 border-solid border-pink-100">
                 profile
