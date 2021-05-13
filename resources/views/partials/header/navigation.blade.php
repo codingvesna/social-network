@@ -21,18 +21,7 @@
         </a>
     </li>
 
-    <li class="navicon nav-icon" style="width: 40px; height: 40px;"
-        title="Moj nalog">
-        <a href="#">
-            <span class="p-3 align-middle"><i class="fi fi-person text-lg text-icon"></i></span>
-        </a>
-    </li>
 
-{{--    <li class="nav-avatar nav-icon" >--}}
-{{--        <a href="#">--}}
-{{--            <img class="inline object-cover w-8 h-8 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile picture"/>--}}
-{{--        </a>--}}
-{{--    </li>--}}
     <div class="relative"  x-data="{ open: false }">
         <button class="focus:outline-none"
                 @click="open = !open"
@@ -48,6 +37,12 @@
             x-transition:leave-end="opacity-0 transform scale-95"
             class="absolute font-normal bg-white shadow overflow-hidden w-48 border mt-6 right-0 z-20 avatar-dropdown">
             <li class="nav-icon w-full flex items-center hover:bg-queen-blue"
+                title="Moj nalog">
+                <a href="#" class="flex flex-row align-middle items-center justify-start w-full">
+                    <span class="p-2 align-middle text-sm text-icon"><i class="fi fi-person text-lg text-icon mr-3 align-middle"></i>Moj nalog</span>
+                </a>
+            </li>
+            <li class="nav-icon w-full flex items-center hover:bg-queen-blue"
                 title="Podešavanja">
                 <a href="#" class="flex flex-row align-middle items-center justify-start w-full">
                     <span class="p-2 align-middle text-sm text-icon"><i class="fi fi-player-settings text-lg text-icon mr-3 align-middle"></i>Podešavanja</span>
@@ -56,7 +51,7 @@
             <li class="nav-icon w-full flex items-center hover:bg-queen-blue"
                 title="Logout">
                 <a href="{{ route('logout') }}" class="flex flex-row align-middle items-center justify-start w-full">
-                    <span class="p-2 align-middle text-sm text-icon"><i class="fi fi-power text-lg text-icon mr-3 align-middle"></i>Logout</span>
+                    <span class="p-2 align-middle text-sm text-icon flex items-center"><i class="fi fi-power text-lg text-icon mr-3 align-middle"></i>Logout</span>
                 </a>
             </li>
         </ul>
