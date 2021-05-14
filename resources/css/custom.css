@@ -6,6 +6,8 @@ body {
 }
 
 li.nav-icon:hover a span i,
+li.nav-icon:hover button span i,
+li.nav-icon:hover button span,
 ul.avatar-dropdown li:hover a,
 ul.avatar-dropdown li:hover span,
 ul.sidenav li:hover a span{

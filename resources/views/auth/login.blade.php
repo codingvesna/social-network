@@ -62,8 +62,16 @@
                                 @enderror
                             </div>
                              </div>
+
+                            <div class="w-full flex flex-col lg:flex-row justify-center lg:justify-between">
+                                <div class="w-full px-3 mb-5 flex items-center justify-start">
+                                    <input type="checkbox" name="remember" id="remember" class="mr-2">
+                                    <label for="remember" class="text-xs text-queen-blue">Zapamti me</label>
+                                </div>
+                            </div>
+
                         </div>
-                        <div class="w-1/2 md:w-1/3 xl:w-1/3 mx-auto text-center mt-10">
+                        <div class="w-1/2 md:w-1/3 xl:w-1/3 mx-auto text-center mt-5">
                             <input type="submit" class="w-full px-4 py-2 bg-queen-blue font-normal text-xs tracking-widest text-white rounded-full cursor-pointer hover:bg-fiery-red focus:bg-fiery-red" value="Uloguj se">
                         </div>
                     </form>
