@@ -15,10 +15,14 @@
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "postcss": "^8.2.10",
-        "tailwindcss": "^2.1.1"
+        "sass": "^1.32.13",
+        "sass-loader": "^11.1.1",
+        "tailwindcss": "^2.1.1",
+        "webpack": "^5.37.0"
     },
     "dependencies": {
         "alpinejs": "^2.8.2",
-        "fontisto": "^3.0.4"
+        "fontisto": "^3.0.4",
+        "jquery": "^3.6.0"
     }
 }
