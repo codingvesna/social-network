@@ -40,5 +40,9 @@
                 </div>
             </div>
         </div>
+
+        <div class="w-full border-b-1 border-solid border-border px-4 py-4 text-p text-base font-bold">
+            <a href="#" class="text-fiery-red hover:text-p text-xs">Vidi još</a>
+        </div>
     </div>
 </div>

@@ -18,6 +18,27 @@
     @include('partials.header.header')
     <!-- Mobile Search -->
     @include('partials.header.search_mobile')
-@yield('content')
+
+    <main class="px-4 lg:px-10 py-4 lg:py-6 mt-5">
+        <section class="w-full flex flex-col md:flex-row justify-center items-start">
+            <aside class="h-auto w-full md:w-2/12 px-4">
+                <!-- Sidebar -->
+            @include('partials.aside.sidebar')
+            <!-- CTA -->
+            @include('partials.aside.cta')
+            </aside>
+
+            @yield('content')
+
+            <aside class="h-auto w-full md:w-3/12">
+                <!-- Profile Card -->
+                @include('partials.aside.profile_card')
+                <!-- Who to follow - View All -->
+                @include('partials.aside.who_to_follow')
+                <!-- Group Suggestions - View All -->
+                @include('partials.aside.my_groups')
+            </aside>
+        </section>
+    </main>
 </body>
 </html>
