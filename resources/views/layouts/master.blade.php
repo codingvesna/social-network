@@ -11,10 +11,34 @@
     <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
+    <script src="{{asset('js/app.js')}}" type="text/javascript"></script>
+    <script src="{{asset('js/main.js')}}" type="text/javascript" defer></script>
 </head>
 <body class="font-body">
-@include('partials.header.header')
-@yield('content')
+    @include('partials.header.header')
+    <!-- Mobile Search -->
+    @include('partials.header.search_mobile')
+
+    <main class="px-4 lg:px-10 py-4 lg:py-6 mt-5">
+        <section class="w-full flex flex-col md:flex-row justify-center items-start">
+            <aside class="h-auto hidden lg:block lg:w-2/12 px-4">
+                <!-- Sidebar -->
+            @include('partials.aside.sidebar')
+            <!-- CTA -->
+            @include('partials.aside.cta')
+            </aside>
+
+            @yield('content')
+
+            <aside class="h-auto hidden lg:block lg:w-3/12">
+                <!-- Profile Card -->
+                @include('partials.aside.profile_card')
+                <!-- Who to follow - View All -->
+                @include('partials.aside.who_to_follow')
+                <!-- Group Suggestions - View All -->
+                @include('partials.aside.my_groups')
+            </aside>
+        </section>
+    </main>
 </body>
 </html>

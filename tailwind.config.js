@@ -13,7 +13,7 @@ module.exports = {
         colors: {
 
             'neutral' : '#F7F7F2',
-            'queen-blue' :'#456990',
+            'queen-blue' :'#019FDE',
             'fiery-red' : '#f45b69',
             'main' : '#3b3b3b',
             'p' : '#3e4e50',
