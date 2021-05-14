@@ -31,7 +31,8 @@
                 @include('partials.aside.profile_card')
                 <!-- Who to follow - View All -->
                 @include('partials.aside.who_to_follow')
-                <!-- Group Suggestions - View All -->d
+                <!-- Group Suggestions - View All -->
+                @include('partials.aside.my_groups')
                 <!-- Popular Tags -->
             </aside>
         </section>
