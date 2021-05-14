@@ -2,7 +2,7 @@
 {{--    <li><h3 class="text-p text-base mr-5 align-middle">{{ auth()->user()->name }}</h3></li>--}}
     <li class="navicon nav-icon" style="width: 40px; height: 40px;"
         title="Početna">
-        <a href="#">
+        <a href="{{ route('dashboard') }}">
             <span class="p-3 align-middle"><i class="fi fi-home text-lg text-icon"></i></span>
         </a>
     </li>
@@ -56,8 +56,13 @@
             </li>
             <li class="nav-icon w-full flex items-center hover:bg-queen-blue"
                 title="Logout">
-                <a href="{{ route('logout') }}" class="flex flex-row align-middle items-center justify-start w-full">
-                    <span class="p-2 align-middle text-sm text-icon flex items-center"><i class="fi fi-power text-lg text-icon mr-3 align-middle"></i>Logout</span>
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+                    <button type="submit" class="flex flex-row align-middle items-center justify-start w-full cursor-pointer">
+                        <span class="p-2 align-middle text-sm text-icon flex items-center"><i class="fi fi-power text-lg text-icon mr-3 align-middle"></i>Logout</span>
+                    </button>
+                </form>
+
                 </a>
             </li>
         </ul>

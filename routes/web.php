@@ -21,6 +21,9 @@ Route::get('/', function () {
     return view('auth.register');
 });
 
+//Route::get('/dashboard', [DashboardController::class, 'index'])
+//    ->name('dashboard')
+//    ->middleware('auth');
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
@@ -29,5 +32,9 @@ Route::post('/register', [RegisterController::class, 'store']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'store']);
 
-Route::get('/logout', [LogoutController::class, 'store'])->name('logout');
+Route::post('/logout', [LogoutController::class, 'store'])->name('logout');
+
+Route::get('/fail', function () {
+    return view('page_not_found');
+});
 
