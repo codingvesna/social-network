@@ -10,11 +10,11 @@
                     @csrf
                     <div class="w-full">
                         <label for="post"></label>
-                        <textarea name="post" id="post" rows="3"  class="w-full focus:outline-none" maxlength="222" placeholder="O čemu razmišljate?"></textarea>
+                        <textarea name="post" id="post" rows="4"  class="w-full focus:outline-none" maxlength="150" placeholder="O čemu razmišljate?"></textarea>
                     </div>
                     <div class="w-full flex justify-between items-center mt-5">
-                        <div class="text-p text-sm">
-                            <span id="chars">222</span><span> / 222</span>
+                        <div class="text-gray-400 text-sm">
+                            <span id="chars">150</span><span> / 150</span>
                         </div>
                         <input type="submit" class="w-1/3 lg:w-1/4 px-4 py-2 bg-queen-blue font-normal text-sm tracking-wide text-white rounded-full cursor-pointer hover:bg-fiery-red focus:bg-fiery-red" value="Objavi">
                     </div>

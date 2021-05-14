@@ -6,7 +6,7 @@ var __webpack_exports__ = {};
 $(document).ready(function () {
   console.log("ready!"); // Create Post Characters Limit
 
-  var maxLength = 222;
+  var maxLength = 150;
   $('#post').keyup(function () {
     var length = $(this).val().length;
     var currentLength = maxLength - length;
