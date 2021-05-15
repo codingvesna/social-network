@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -15,7 +16,11 @@ class PostController extends Controller
         //dd(auth()->user());
         // dd(auth()->user()->posts()) // HasMany
        // dd(auth()->user()->posts); //Collection
-        return view('index');
+
+        $posts = Post::get()->sortByDesc('created_at'); // collection
+        return view('index', [
+            'posts' => $posts
+        ]);
     }
 
     public function store(Request $request){
@@ -23,12 +28,13 @@ class PostController extends Controller
             'post' => 'required'
         ]);
 
-//        $request->user()->posts()->create([
-//            'post' => $request->post
-//        ]);
         $request->user()->posts()->create($request->only('post'));
         return back();
 
+
+//        $request->user()->posts()->create([
+//            'post' => $request->post
+//        ]);
 //        auth()->user()->posts()->create();
 //        Post::create([
 //            'user_id' => auth()->user()->id,
