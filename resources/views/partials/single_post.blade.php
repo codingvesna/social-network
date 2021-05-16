@@ -26,7 +26,7 @@
                     <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> {{ $post->likes->count() }}</span>
 
                     <div class="flex items-center">
-                        <form action="" method="post" class="mr-5">
+                        <form action="{{ route('posts.likes', $post->id) }}" method="post" class="mr-5">
                             @csrf
                             <button type="submit" title="Like" class="text-sm text-icon hover:text-fiery-red focus:outline-none">
                                 <i class="fi fi-like"></i>
