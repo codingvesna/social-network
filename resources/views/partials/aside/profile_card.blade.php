@@ -14,7 +14,7 @@
         </div>
         <div class="py-10 px-6 text-center tracking-wide grid grid-cols-3 gap-6">
             <div class="posts">
-                <p class="text-lg">324</p>
+                <p class="text-lg">{{ auth()->user()->posts->count()  }}</p>
                 <p class="text-gray-400 text-sm">Objave</p>
             </div>
             <div class="followers">
