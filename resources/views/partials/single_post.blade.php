@@ -23,7 +23,7 @@
                     <p class="text-p">{{ $post->post }}</p>
                 </div>
                 <div class="w-full border-b-1 border-solid border-border px-4 py-4 flex justify-between items-center">
-                    <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> 12</span>
+                    <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> {{ $post->likes->count() }}</span>
 
                     <div class="flex items-center">
                         <form action="" method="post" class="mr-5">
