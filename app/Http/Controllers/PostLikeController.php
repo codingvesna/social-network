@@ -8,16 +8,26 @@ use Illuminate\Http\Request;
 
 class PostLikeController extends Controller
 {
+   public function __construct()
+   {
+       $this->middleware(['auth']);
+   }
+
     public function store(Post $post, Request $request){
        // dd($post->likedBy($request->user()));
         if($post->likedBy($request->user())) {
-            return Response(null, 409);
+            return response(null, 409);
         }
 
         $post->likes()->create([
             'user_id' => $request->user()->id
         ]);
 
+        return back();
+    }
+
+    public function destroy(Post $post, Request $request){
+        $request->user()->likes()->where('post_id', $post->id)->delete();
         return back();
     }
 }
