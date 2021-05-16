@@ -31,5 +31,7 @@
         </div>
     @endforeach
 @else
-    <p> Nema objava.</p>
+    <div class="w-full h-auto flex flex-col justify-center items-center mb-10">
+        <p> Nema objava.</p>
+    </div>
 @endif
