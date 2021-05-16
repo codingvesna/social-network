@@ -26,18 +26,21 @@
                     <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> {{ $post->likes->count() }}</span>
 
                     <div class="flex items-center">
-                        <form action="{{ route('posts.likes', $post->id) }}" method="post" class="mr-5">
-                            @csrf
-                            <button type="submit" title="Like" class="text-sm text-icon hover:text-fiery-red focus:outline-none">
-                                <i class="fi fi-like"></i>
-                            </button>
-                        </form>
-                        <form action="" method="post">
-                            @csrf
-                            <button type="submit" title="Unlike" class="text-sm text-icon hover:text-queen-blue focus:outline-none">
-                                <i class="fi fi-dislike"></i>
-                            </button>
-                        </form>
+                        @if (!$post->likedBy(auth()->user()))
+                            <form action="{{ route('posts.likes', $post->id) }}" method="post">
+                                @csrf
+                                <button type="submit" title="Like" class="text-sm text-icon hover:text-fiery-red focus:outline-none">
+                                    <i class="fi fi-like"></i>
+                                </button>
+                            </form>
+                        @else
+                            <form action="" method="post">
+                                @csrf
+                                <button type="submit" title="Unlike" class="text-sm text-icon hover:text-queen-blue focus:outline-none">
+                                    <i class="fi fi-dislike"></i>
+                                </button>
+                            </form>
+                        @endif
                     </div>
                 </div>
 
