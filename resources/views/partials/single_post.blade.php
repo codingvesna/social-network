@@ -11,11 +11,21 @@
                                 <img class="inline object-cover w-8 h-8 md:w-12 md:h-12 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile picture"/>
                             </a>
                         </div>
-                        <div class="w-10/12 flex flex-col justify-start items-start">
-                            <a href="#">
-                                <span class="font-bold text-base text-p">{{$post->user->name}} {{$post->user->last_name}} </span>
-                            </a>
-                            <span class="text-xs font-normal text-queen-blue"> {{$post->created_at->toTimeString()}}</span>
+                        <div class="w-10/12 flex items-center justify-between">
+                            <div class="flex flex-col justify-start items-start">
+                                <a href="#">
+                                    <span class="font-bold text-base text-p">{{$post->user->name}} {{$post->user->last_name}} </span>
+                                </a>
+                                <span class="text-xs font-normal text-queen-blue"> {{$post->created_at->toTimeString()}}</span>
+                            </div>
+                            <div>
+                                <form action="" method="post">
+                                    @csrf
+                                    <button type="submit" title="Obrisi" class="text-sm text-queen-blue hover:text-fiery-red focus:outline-none">
+                                        <i class="fi fi-trash"></i>
+                                    </button>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
