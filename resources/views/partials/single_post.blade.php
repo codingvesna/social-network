@@ -18,22 +18,26 @@
                                 </a>
                                 <span class="text-xs font-normal text-queen-blue"> {{$post->created_at->toTimeString()}}</span>
                             </div>
-                            <div>
-                                <form action="{{ route('posts.delete', $post) }}" method="post">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" title="Obrisi" class="text-sm text-queen-blue hover:text-fiery-red focus:outline-none">
-                                        <i class="fi fi-trash"></i>
-                                    </button>
-                                </form>
-                            </div>
+{{--                            @if($post->ownedBy(auth()->user()))--}}
+                            @can('delete', $post)
+                                <div>
+                                    <form action="{{ route('posts.delete', $post) }}" method="post">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" title="Obrisi" class="text-sm text-queen-blue hover:text-fiery-red focus:outline-none">
+                                            <i class="fi fi-trash"></i>
+                                        </button>
+                                    </form>
+                                </div>
+                            @endcan
+{{--                            @endif--}}
                         </div>
                     </div>
                 </div>
                 <div class="w-full border-b-1 border-solid border-border px-4 py-4">
                     <p class="text-p">{{ $post->post }}</p>
                 </div>
-                <div class="w-full border-b-1 border-solid border-border px-4 py-4 flex justify-between items-center">
+                 <div class="w-full border-b-1 border-solid border-border px-4 py-4 flex justify-between items-center">
                     <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> {{ $post->likes->count() }}</span>
 
                     <div class="flex items-center">

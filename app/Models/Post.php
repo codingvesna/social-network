@@ -17,6 +17,9 @@ class Post extends Model
 //        return $this->likes->contains('user_id', $user-id);
         return $this->likes()->where('user_id', $user->id)->exists();
     }
+//    public function ownedBy(User $user){
+//        return $user->id === $this->user_id;
+//    } // move to PostPolicy
 
     public function user(){
         return $this->belongsTo(User::class);
