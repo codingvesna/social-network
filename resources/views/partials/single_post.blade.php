@@ -19,8 +19,9 @@
                                 <span class="text-xs font-normal text-queen-blue"> {{$post->created_at->toTimeString()}}</span>
                             </div>
                             <div>
-                                <form action="" method="post">
+                                <form action="{{ route('posts.delete', $post) }}" method="post">
                                     @csrf
+                                    @method('DELETE')
                                     <button type="submit" title="Obrisi" class="text-sm text-queen-blue hover:text-fiery-red focus:outline-none">
                                         <i class="fi fi-trash"></i>
                                     </button>

@@ -41,4 +41,10 @@ class PostController extends Controller
 //            'post' => $request->post
 //        ]);
     }
+
+    public function destroy(Post $post){
+        $post->delete();
+
+        return back();
+    }
 }

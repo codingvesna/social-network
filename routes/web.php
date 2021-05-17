@@ -28,6 +28,9 @@ Route::get('/', function () {
 
 Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
 Route::post('/dashboard', [PostController::class, 'store']);
+Route::delete('/dashboard/{post}', [PostController::class, 'destroy'])->name('posts.delete');
+
+
 Route::post('/dashboard/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/dashboard/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
