@@ -31,6 +31,8 @@ Route::post('/dashboard', [PostController::class, 'store']);
 Route::post('/dashboard/{post}/likes', [PostLikeController::class, 'store'])->name('posts.likes');
 Route::delete('/dashboard/{post}/likes', [PostLikeController::class, 'destroy'])->name('posts.likes');
 
+Route::get('/favourites', [PostLikeController::class, 'show'])->name('favourites');
+
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store']);

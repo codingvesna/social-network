@@ -14,7 +14,8 @@ class Post extends Model
     ];
 
     public function likedBy(User $user){
-        return $this->likes->contains('user_id', $user->id);
+//        return $this->likes->contains('user_id', $user-
+        return $this->likes()->where('user_id', $user->id)->exists();
     }
 
     public function user(){
