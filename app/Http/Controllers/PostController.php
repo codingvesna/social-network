@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -16,11 +17,11 @@ class PostController extends Controller
         //dd(auth()->user());
         // dd(auth()->user()->posts()) // HasMany
        // dd(auth()->user()->posts); //Collection
-
+        $users = User::get()->sortByDesc('created_at' )->take(3);
         $posts = Post::get()->sortByDesc('created_at'); // collection
         return view('index', [
-            'posts' => $posts
-        ]);
+            'posts' => $posts,
+            'users' => $users]);
     }
 
     public function store(Request $request){
