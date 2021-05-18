@@ -1,6 +1,6 @@
 
 
-@if ($posts->count())
+{{--@if ($posts->count())--}}
     @foreach($posts as $post)
         <div class="w-full h-auto flex flex-col justify-center items-center mb-10">
             <div class="w-full lg:w-10/12 2xl:w-8/12 mx-auto border-solid border-1 border-border flex flex-col rounded-xl shadow">
@@ -11,6 +11,7 @@
                                 <img class="inline object-cover w-8 h-8 md:w-12 md:h-12 rounded-full" src="https://images.pexels.com/photos/2589653/pexels-photo-2589653.jpeg?auto=compress&cs=tinysrgb&h=650&w=940" alt="profile picture"/>
                             </a>
                         </div>
+
                         <div class="w-10/12 flex items-center justify-between">
                             <div class="flex flex-col justify-start items-start">
                                 <a href="#">
@@ -18,7 +19,7 @@
                                 </a>
                                 <span class="text-xs font-normal text-queen-blue"> {{$post->created_at->toTimeString()}}</span>
                             </div>
-{{--                            @if($post->ownedBy(auth()->user()))--}}
+                            {{--                            @if($post->ownedBy(auth()->user()))--}}
                             @can('delete', $post)
                                 <div>
                                     <form action="{{ route('posts.delete', $post) }}" method="post">
@@ -30,14 +31,16 @@
                                     </form>
                                 </div>
                             @endcan
-{{--                            @endif--}}
+                            {{--                            @endif--}}
                         </div>
                     </div>
                 </div>
+
+
                 <div class="w-full border-b-1 border-solid border-border px-4 py-4">
                     <p class="text-p">{{ $post->post }}</p>
                 </div>
-                 <div class="w-full border-b-1 border-solid border-border px-4 py-4 flex justify-between items-center">
+                <div class="w-full border-b-1 border-solid border-border px-4 py-4 flex justify-between items-center">
                     <span class="text-icon text-sm"><i class="fi fi-heart text-fiery-red mr-1"></i> {{ $post->likes->count() }}</span>
 
                     <div class="flex items-center">
@@ -63,8 +66,8 @@
             </div>
         </div>
     @endforeach
-@else
-    <div class="w-full h-auto flex flex-col justify-center items-center mb-10">
-        <p> Nema objava.</p>
-    </div>
-@endif
+{{--@else--}}
+{{--    <div class="w-full h-auto flex flex-col justify-center items-center mb-10">--}}
+{{--        <p> No posts.</p>--}}
+{{--    </div>--}}
+{{--@endif--}}

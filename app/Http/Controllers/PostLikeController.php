@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Like;
 use App\Models\Post;
+use App\Models\User;
 use http\Env\Response;
 use Illuminate\Http\Request;
 
@@ -29,5 +31,14 @@ class PostLikeController extends Controller
     public function destroy(Post $post, Request $request){
         $request->user()->likes()->where('post_id', $post->id)->delete();
         return back();
+    }
+
+    public function show()
+    {
+        $posts = Post::whereHas('likes', function ($query) {
+            $query->where('user_id', auth()->id());
+        })->orderBy('created_at', 'desc')->get();
+
+        return view('favourites', ['posts' => $posts]);
     }
 }

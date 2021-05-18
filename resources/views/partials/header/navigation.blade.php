@@ -15,7 +15,7 @@
 
     <li class="nav-red-icon nav-icon" style="width: 40px; height: 40px;"
         title="Favoriti">
-        <a href="#">
+        <a href="{{ route('favourites') }}">
             <span class="p-3 align-middle"><i class="fi fi-heart-alt text-lg text-icon"></i></span>
         </a>
     </li>

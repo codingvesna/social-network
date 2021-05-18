@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Post;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class PostController extends Controller
@@ -16,10 +17,9 @@ class PostController extends Controller
         //dd(auth()->user());
         // dd(auth()->user()->posts()) // HasMany
        // dd(auth()->user()->posts); //Collection
-
         $posts = Post::get()->sortByDesc('created_at'); // collection
         return view('index', [
-            'posts' => $posts
+            'posts' => $posts,
         ]);
     }
 
@@ -40,5 +40,16 @@ class PostController extends Controller
 //            'user_id' => auth()->user()->id,
 //            'post' => $request->post
 //        ]);
+    }
+
+    public function destroy(Post $post){
+
+//        if (!$post->ownedBy(auth()->user)){
+//            dd('no');
+//        }
+        $this->authorize('delete', $post);
+        $post->delete();
+
+        return back();
     }
 }
